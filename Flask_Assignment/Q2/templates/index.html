@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Static Pages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p><a href="{{ url_for('page1') }}">Go to Page 1</a></p>
+    <p><a href="{{ url_for('page2') }}">Go to Page 2</a></p>
+</body>
+</html>
