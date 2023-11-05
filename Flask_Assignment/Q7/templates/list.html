@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border = "1">
+        <thead>
+            <td>Name</td>
+            <td>ID</td>
+            <td>Subject</td>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{row['NAME']}}</td>
+            <td>{{row['ID']}}</td>
+            <td>{{row['SUBJECT']}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+    <a href="/">Go to Home Page</a>
+
+
+
+</body>
+</html>

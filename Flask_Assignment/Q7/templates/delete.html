@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Student Record</title>
+</head>
+<body>
+    <h1>Delete Student Record</h1>
+    <form method="POST" action="/delete_record">
+        <label for="id">Student ID:</label>
+        <input type="text" name="id" id="id" required>
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{{ url_for('list') }}">Back to Student List</a>
+</body>
+</html>
