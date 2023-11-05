@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Notification</title>
+</head>
+<body>
+    <h1>Send a Notification</h1>
+    <input id="notification-input" type="text" placeholder="Notification message">
+    <button id="send-notification-button">Send Notification</button>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        var notificationInput = document.getElementById('notification-input');
+        var sendNotificationButton = document.getElementById('send-notification-button');
+
+        sendNotificationButton.addEventListener('click', function() {
+            var message = notificationInput.value;
+            socket.emit('send_notification', message);
+        });
+    </script>
+</body>
+</html
